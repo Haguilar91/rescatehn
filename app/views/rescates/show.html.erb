@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @rescate.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @rescate.lastname %>
+</p>
+
+<p>
+  <strong>Childs:</strong>
+  <%= @rescate.childs %>
+</p>
+
+<p>
+  <strong>Adults:</strong>
+  <%= @rescate.adults %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @rescate.note %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @rescate.phone %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @rescate.status %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @rescate.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @rescate.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_rescate_path(@rescate) %> |
+<%= link_to 'Back', rescates_path %>

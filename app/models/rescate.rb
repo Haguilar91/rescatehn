@@ -1,0 +1,2 @@
+class Rescate < ApplicationRecord
+end

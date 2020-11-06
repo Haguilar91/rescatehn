@@ -1,0 +1,33 @@
+development:
+  adapter: mysql2
+  host: 192.168.50.41
+  encoding: utf8mb4
+  reconnect: false
+  database: rescueapphn
+  #port: 3306
+  pool: 5
+  username: dbuser
+  password: Honduras2020FTW!!
+  socket: /tmp/mysql.sock
+test:
+  adapter: mysql2
+  encoding: utf8mb4
+  host: 192.168.50.41
+  #port: 3306
+  reconnect: false
+  pool: 5
+  username: dbuser
+  database: rescueapphn
+  password: Honduras2020FTW!!
+  socket: /tmp/mysql.sock
+production:
+  adapter: mysql2
+  encoding: utf8mb4
+  reconnect: false
+  host: 192.168.50.41
+  pool: 5
+  database: rescueapphn
+  #port: 3306
+  username: root
+  password: Honduras2016FTW
+  socket: /tmp/mysql.sock
