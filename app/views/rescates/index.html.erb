@@ -1,16 +1,18 @@
 <p id="notice"><%= notice %></p>
+<div class="jumbotron">
+  <h1>Rescates</h1>
+</div>
 
-<h1>Rescates</h1>
-
-<table>
-  <thead>
+<h1><%=request.location.country%></h1>
+<table class="table table-responsive">
+  <thead class="thead-dark">
     <tr>
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Childs</th>
-      <th>Adults</th>
-      <th>Note</th>
-      <th>Phone</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Ninos</th>
+      <th>Adultos</th>
+      <th>Notas</th>
+      <th>Telefono</th>
       <th>Status</th>
       <th>Latitude</th>
       <th>Longitude</th>
@@ -28,11 +30,12 @@
         <td><%= rescate.note %></td>
         <td><%= rescate.phone %></td>
         <td><%= rescate.status %></td>
+        <td><%= Location.near([rescate.latitude, rescate.longitude],20)%></td>
         <td><%= rescate.latitude %></td>
         <td><%= rescate.longitude %></td>
-        <td><%= link_to 'Show', rescate %></td>
-        <td><%= link_to 'Edit', edit_rescate_path(rescate) %></td>
-        <td><%= link_to 'Destroy', rescate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', rescate %></td>
+        <td><%= link_to 'Editar', edit_rescate_path(rescate) %></td>
+        <td><%= link_to 'Eliminar', rescate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +43,4 @@
 
 <br>
 
-<%= link_to 'New Rescate', new_rescate_path %>
+<%= link_to 'Pedir Ayuda', new_rescate_path %>
